@@ -1,11 +1,13 @@
 public class Main {
     public static int yearsVis(int years) {
         if (years % 4 == 0 && years != 100) {
-            throw new RuntimeException("Год високосный");
-        } else throw new RuntimeException("Год не високосный");
+            System.out.println("Год високосный");
+        } else System.out.println("Год не високосный");
+        return years;
     }
 
-    public static boolean distance(int way) {
+
+    public static int distance(int way) {
         if (way >= 0 && way <= 20) {
             System.out.println("Время доставки занимает один день. ");
         } else if (way > 20 && way <= 60) {
@@ -15,7 +17,7 @@ public class Main {
         } else if (way > 100) {
             System.out.println("Доставка на эту дистанцию не осуществляется");
         }
-        return true;
+        return way;
     }
 
     public static boolean system(int system) {
@@ -36,17 +38,17 @@ public class Main {
         return true;
     }
     public static void main(String[] args) {
-        int year = 1956;
+        int year = 2020;
         int check = yearsVis(year);
-        System.out.println(check);
+
 
         int choice = 1;
-        int year_Of_System = 2010;
+        int yearOfSystems = 2010;
         boolean something = system(choice);
-        boolean valume = yearOfSystem(year_Of_System);
+        boolean valume = yearOfSystem(yearOfSystems);
 
 
         int deliveryDistance = 95;
-        boolean determine = distance(deliveryDistance);
+        int determine = distance(deliveryDistance);
     }
 }

@@ -5,23 +5,25 @@ public class Main {
         } else System.out.println("Год не високосный");
         return years;
     }
-
-
     public static int distance(int way) {
         int daysOfDelivery = 0;
         if (way >= 0 && way <= 20) {
-            System.out.println("Время доставки занимает один день. ");
             daysOfDelivery = 1;
+            System.out.println("Время доставки занимает: " + daysOfDelivery + " день");
+
         } else if (way > 20 && way <= 60) {
-            System.out.println("Время доставки занимает два дня");
             daysOfDelivery = 2;
+            System.out.println("Время доставки занимает: " + daysOfDelivery + " дня");
+
         } else if (way > 60 && way <= 100) {
-            System.out.println("Время доставки занимает три дня");
-            daysOfDelivery = 4;
+            daysOfDelivery = 3;
+            System.out.println("Время доставки занимает: " + daysOfDelivery + " дня");
+
         } else if (way > 100) {
             System.out.println("Доставка на эту дистанцию не осуществляется");
         }
         return daysOfDelivery;
+
 
     }
 
@@ -52,9 +54,8 @@ public class Main {
         boolean something = system(choice);
         boolean valume = yearOfSystem(yearOfSystems);
 
+
         int deliveryDistance = 95;
         int days = distance(deliveryDistance);
-
-
     }
 }

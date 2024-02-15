@@ -8,16 +8,21 @@ public class Main {
 
 
     public static int distance(int way) {
+        int daysOfDelivery = 0;
         if (way >= 0 && way <= 20) {
             System.out.println("Время доставки занимает один день. ");
+            daysOfDelivery = 1;
         } else if (way > 20 && way <= 60) {
             System.out.println("Время доставки занимает два дня");
+            daysOfDelivery = 2;
         } else if (way > 60 && way <= 100) {
             System.out.println("Время доставки занимает три дня");
+            daysOfDelivery = 4;
         } else if (way > 100) {
             System.out.println("Доставка на эту дистанцию не осуществляется");
         }
-        return way;
+        return daysOfDelivery;
+
     }
 
     public static boolean system(int system) {
@@ -47,8 +52,9 @@ public class Main {
         boolean something = system(choice);
         boolean valume = yearOfSystem(yearOfSystems);
 
-
         int deliveryDistance = 95;
-        int determine = distance(deliveryDistance);
+        int days = distance(deliveryDistance);
+
+
     }
 }
